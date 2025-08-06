@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معز جلال الأربد - التقنية الحديثة</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+        
+        :root {
+            --main-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+        }
+        body {
+            font-family: 'Tajawal', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+            color: #444;
+            background-color: #ecf0f1;
+        }
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: var(--secondary-color);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+        }
+        .hero {
+            padding: 185px 0;
+            text-align: center;
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(52, 152, 219, 0.9)), url('https://images.unsplash.com/photo-1516110833957-c1a17961ae01?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: white;
+            position: relative;
+        }
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.5em;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        .hero a.cta-button {
+            background: var(--accent-color);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 80px;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .hero a.cta-button:hover {
+            background-color: #c0392b;
+            transform: scale(1.05);
+        }
+        section {
+            padding: 60px 0;
+        }
+        .about {
+            background: white;
+        }
+        .skills {
+            background: #f4f6f8;
+        }
+        .projects {
+            background: white;
+        }
+        .contact {
+            background: var(--secondary-color);
+            color: white;
+        }
+        h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: var(--secondary-color);
+            margin-bottom: 40px;
+        }
+        .contact h2 {
+            color: white;
+        }
+        .skill-grid, .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .skill-box, .project-box {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .skill-box:hover, .project-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+        .skill-box i, .project-box i {
+            font-size: 3em;
+            color: var(--main-color);
+            margin-bottom: 15px;
+        }
+        .skill-box h3, .project-box h3 {
+            color: var(--secondary-color);
+            margin-top: 0;
+        }
+        .contact-info p {
+            font-size: 1.2em;
+            text-align: center;
+        }
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9em;
+        }
+        .profile-img {
+            max-width: 450px;
+            
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        .about-text {
+            flex: 1;
+            font-size: 1.3em;
+    padding-right: -80px;
+        }
+        .about-image {
+            flex: 0 0 250px;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+            .about-image {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  
+    
+    <section class="hero">
+        <div class="container">
+            <h2>مرحباً بك في عالمي الرقمي</h2>
+            <p>أهلاً وسهلاً بك. هنا ستجد شغفي بالتقنية والحماية الرقمية.</p>
+            <a href="#projects" class="cta-button">اكتشف مشاريعي</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2>نبذة عني</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>أنا معز جلال الأربد من مدينة شحات – ليبيا، مهتم ومختص بمجالات التقنية الحديثة، أعمل في الأمن السيبراني، تطوير المواقع والتطبيقات، صيانة الهواتف، الشبكات، وتطوير البرمجيات الخبيثة.</p>
+                    <p>أمتلك شغف كبير بمجال الحماية واكتشاف الثغرات، وأسعى دائماً لتطوير مهاراتي من خلال الدورات المتقدمة والمشاريع العملية. أؤمن أن التكنولوجيا سلاح، واستخدامها بالشكل الصحيح هو ما يصنع الفرق.</p>
+                </div>
+                <div class="about-image">
+                    <img src="file:///C:/Users/Administrator/Downloads/undraw_programming_65t2.svg" alt="صورة معز جلال الأربد" class="profile-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2>مهاراتي</h2>
+            <div class="skill-grid">
+                <div class="skill-box">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>برمجة المواقع</h3>
+                </div>
+                <div class="skill-box">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>برمجة التطبيقات</h3>
+                </div>
+                <div class="skill-box">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>الأمن السيبراني</h3>
+                </div>
+                <div class="skill-box">
+                    <i class="fas fa-tools"></i>
+                    <h3>صيانة الهواتف</h3>
+                </div>
+                <div class="skill-box">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>الشبكات</h3>
+                </div>
+                <div class="skill-box">
+                    <i class="fas fa-bug"></i>
+                    <h3>تطوير البرمجيات الخبيثة</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <section class="projects" id="projects">
+    <div class="container">
+        <h2>مشاريعي</h2>
+        <div class="project-grid">
+            <!-- المشروع 1: منصة الاختاربت -->
+            <div class="project-box">
+                <div class="project-media video-container">
+                    <div class="video-wrapper">
+                        <video autoplay muted loop>
+                            <source src="2.webm" type="video/webm">
+                        </video>
+                        <button class="zoom-btn" onclick="openModal('2.webm')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <h3>منصة اختبارات</h3>
+                <p>منصة متكاملة للاختبارات الإلكترونية مع نظام تصحيح آلي وإعداد التقارير وإدارة الأسئلة المصنفة</p>
+            </div>
+
+            <!-- المشروع 2: تحليل قنوات يوتيوب -->
+            <div class="project-box">
+                <div class="project-media video-container">
+                    <div class="video-wrapper">
+                        <video autoplay muted loop>
+                            <source src="6.webm" type="video/webm">
+                        </video>
+                        <button class="zoom-btn" onclick="openModal('6.webm')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <h3>منصة تاجير منيو للمطاعم</h3>
+                <p.>هو نظام يساعد المطاعم علي حصوال علي منيو اكتروني مع امكانيه التعديل في الالوان و الاسم و الشعار و اضافه منتجا اقسام و اضافه مناطق توصيل و تحديد مناطق التوصيل و اسعارها</p>
+            </div>
+             <div class="project-box">
+                <div class="project-media video-container">
+                    <div class="video-wrapper">
+                        <video autoplay muted loop>
+                            <source src="4.webm" type="video/webm">
+                        </video>
+                        <button class="zoom-btn" onclick="openModal('4.webm')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <h3>منصة تحليل يوتيوب بالذكاء الاصطناعي</h3>
+                <p>نظام متكامل لتحليل أداء القنوات مع اقتراحات التحسين، نظام مكافآت للمشاركين، وتسجيل دخول متكامل</p>
+            </div>
+
+             <div class="project-box">
+                <div class="project-media video-container">
+                    <div class="video-wrapper">
+                        <video autoplay muted loop>
+                            <source src="3.webm" type="video/webm">
+                        </video>
+                        <button class="zoom-btn" onclick="openModal('3.webm')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <h3>منصة للاجابه علي الاسئله الدينيه بي ai</h3>
+                <p>هي منصه مخصص للاجابه علي الاسئله الدينيه بيستخدام الذكاء الاصطاناعي </p>
+            </div>
+
+             <div class="project-box">
+                <div class="project-media video-container">
+                    <div class="video-wrapper">
+                        <video autoplay muted loop>
+                            <source src="1.webm" type="video/webm">
+                        </video>
+                        <button class="zoom-btn" onclick="openModal('1.webm')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <h3>نظام لاداره المدارس</h3>
+                <p>هو نظام  يساعد المدارس علي الاداره يوجد فيه اداره طلاب  و اداره المعلمين و اداره الماليه </p>
+            </div>
+
+             <div class="project-box">
+                <div class="project-media video-container">
+                    <div class="video-wrapper">
+                        <video autoplay muted loop>
+                            <source src="5.webm" type="video/webm">
+                        </video>
+                        <button class="zoom-btn" onclick="openModal('5.webm')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <h3>منصه لمركز الابحاث الزرعيه</h3>
+                <p>مواقع خاص لي مركز الابحاث الزرعيه  فيه اخبار و ابحاث و قرارت المركز و نبذه عن المركز و معلومات الاتصال بهم</p>
+            </div>
+            <div class="project-box">
+    <div class="project-media video-container">
+        <div class="video-wrapper">
+            <video autoplay muted loop playsinline>
+                <source src="7.webm" type="video/webm">
+            </video>
+            <button class="zoom-btn" onclick="openModal('7.webm')">
+                <i class="fas fa-expand"></i>
+            </button>
+        </div>
+    </div>
+    <h3>منصه لبيع الكتب و الكورسات</h3>
+    <p>منصه كامل خاصه لمدربين لاداره كورساته و كتبهم و فيهن نظام تسجيل دخوال متكامل و نظام التحكم في الحساب للمستخدم مع امكانيه حن رصيد عرب مراله المدرب و يمكن الشراء عبر الرصيد</p>
+</div>
+
+<div class="project-box">
+    <div class="project-media video-container">
+        <div class="video-wrapper">
+            <video autoplay muted loop playsinline>
+                <source src="8.webm" type="video/webm">
+            </video>
+            <button class="zoom-btn" onclick="openModal('8.webm')">
+                <i class="fas fa-expand"></i>
+            </button>
+        </div>
+    </div>
+    <h3>متجر اكتروني</h3>
+    <p>مترج اكتروني يسط يحتوي علي اضافه منتجات و اسلا الطلابات فقط يمكن للمستخدم انشاء طلب</p>
+</div>
+
+<div class="project-box">
+    <div class="project-media video-container">
+        <div class="video-wrapper">
+            <video autoplay muted loop playsinline>
+                <source src="9.webm" type="video/webm">
+            </video>
+            <button class="zoom-btn" onclick="openModal('9.webm')">
+                <i class="fas fa-expand"></i>
+            </button>
+        </div>
+    </div>
+    <h3>نظام اداره المطاعم</h3>
+    <p>هو نظام لاادره المطاعم تكامل يحتوي علي 3 صلاحيات مستخدم عادي لايحتاج الي تسجيل يمكن الطلاب و (للزبائن ) و الثاني المدير و الثالث الكاشر صلاحيات محدوده</p>
+</div>
+
+            <!-- باقي المشاريع -->
+        </div>
+    </div>
+</section>
+
+<!-- Modal لتكبير الفيديو -->
+<div id="videoModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <video id="modalVideo" controls autoplay>
+            <source src="" type="video/webm">
+        </video>
+    </div>
+</div>
+
+<style>
+    /* استيراد أيقونات Font Awesome */
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+    video::-webkit-media-controls-volume-slider,
+video::-webkit-media-controls-mute-button {
+    display: none !important;
+}
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 25px;
+    }
+    
+    .project-box {
+        border: 1px solid #eee;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s;
+        padding: 10px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .video-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* نسبة 16:9 */
+        margin: 5px 0;
+    }
+    
+    .video-wrapper {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+        height: 90%;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    .video-wrapper video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .zoom-btn {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background: rgba(0,0,0,0.5);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+    }
+    
+    .zoom-btn:hover {
+        background: rgba(0,0,0,0.8);
+        transform: scale(1.1);
+    }
+    
+    /* Modal التكبير */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.8);
+    }
+    
+    .modal-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        max-width: 900px;
+    }
+    
+    .modal video {
+        width: 100%;
+        border-radius: 8px;
+    }
+    
+    .close {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+    }
+</style>
+
+<script>
+    function openModal(videoSrc) {
+        const modal = document.getElementById('videoModal');
+        const modalVideo = document.getElementById('modalVideo');
+        
+        modalVideo.src = videoSrc;
+        modal.style.display = 'block';
+        
+       
+        modalVideo.load();
+        modalVideo.play();
+    }
+    
+    function closeModal() {
+        const modal = document.getElementById('videoModal');
+        const modalVideo = document.getElementById('modalVideo');
+        
+        modalVideo.pause();
+        modal.style.display = 'none';
+    }
+    
+   
+    window.onclick = function(event) {
+        const modal = document.getElementById('videoModal');
+        if (event.target == modal) {
+            closeModal();
+        }
+    }
+    document.querySelectorAll('video').forEach(video => {
+    video.muted = true; 
+    video.volume = 0;   
+});
+</script>
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>تواصل معي</h2>
+            <div class="contact-info" style="text-align: center;">
+                <p><i class="fas fa-phone-alt"></i> هاتف: 09429333793</p>
+                <p><i class="fas fa-envelope"></i> بريد إلكتروني: lrbdmz@gmail.com</p>
+                <div style="margin-top: 20px;">
+                    <a href="#" style="color: white; font-size: 2em; margin: 0 10px;"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#" style="color: white; font-size: 2em; margin: 0 10px;"><i class="fab fa-twitter-square"></i></a>
+                    <a href="#" style="color: white; font-size: 2em; margin: 0 10px;"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>جميع الحقوق محفوظة &copy; 2023 معز جلال الأربد</p>
+        </div>
+    </footer>
+</body>
+</html>
